@@ -518,7 +518,7 @@ let Cacheu = {
         name : CACHEU,
         flagUrl: CACHEU_FLAG,
         opinion: Math.floor(Math.random()*MAX_STARTING_PROVINCE_OPINION)+1,
-        color : "#b4b4b4",
+        color : "#fe9db3",
         dynastyName : CACHEU_DYNASTY
 };
 let Sefbi = {
@@ -1018,8 +1018,8 @@ let regions = {
         name : "Ouahigouya",
         countryOwner: Mossi,
         soldiers : Math.floor(Math.random() * (MAX_PROVINCE_SOLDIERS - MIN_PROVINCE_SOLDIERS) + MIN_PROVINCE_SOLDIERS)
-    }, "Zinder" : {
-        name : "Zinder",
+    }, "Zindari" : {
+        name : "Zindari",
         countryOwner: Kano,
         soldiers : Math.floor(Math.random() * (MAX_PROVINCE_SOLDIERS - MIN_PROVINCE_SOLDIERS) + MIN_PROVINCE_SOLDIERS)
     }, "Gombe" : {
