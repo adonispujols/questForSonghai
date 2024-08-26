@@ -1,0 +1,525 @@
+/* Copyright 2023, A. P., All rights reserved.*/
+/*apply font to everything*/
+*{
+    font-family: Garamond, serif;
+}
+
+body {
+    background-color: #A4CAF6;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+#initialScreen {
+  display: none;
+}
+
+.overlayContent {
+  position: fixed;
+  height: 100vh;
+  overflow: auto;
+}
+
+.creditsDiv {
+  position: fixed;
+  bottom: 0;
+}
+
+.iconChoices img {
+  height: 172px;
+  background-color: linen;
+  border-width: 7px;
+  border-style: solid;
+  border-color: wheat;
+}
+
+.iconCol {
+
+}
+
+#pickIconP {
+  font-size: 30px;
+  padding-bottom: 6px;
+  margin: 0;
+}
+
+.iconRow {
+  display: flex;
+}
+
+.fairUseCopyRight {
+    font-size: 25px;
+    background-color: darkslategray;
+    width: fit-content;
+    /*position: fixed;*/
+    bottom: 0px;
+    font-weight: bolder;
+    color: white;
+    left: 40%;
+    margin: 0;
+}
+
+.fancyButton {
+  background-image: url('../media/buttonBackground.png');
+  background-size: 350% 100%;
+  color: white;
+  padding: 7px;
+}
+
+.actionsUI button {
+  background-image: url('../media/buttonBackground.png');
+  background-size: 350% 100%;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#menuButton {
+  font-size: 68px;
+  left: 42%;
+  position: fixed;
+  top: 44%;
+}
+
+#confirmInfo {
+  display:inline-block;
+  font-size: 35px;
+}
+
+/*#confirmInfo:disabled {
+  opacity: 0.7;
+}*/
+
+#loadGameButton {
+  font-size: 40px;
+}
+
+#confirmStartText {
+  font-size: 30px;
+}
+
+.confirmStartField {
+  color: white;
+  width: 100%;
+  font-size: 40px;
+  display: inline-block;
+  background-image: url('../media/headerBackground.png');
+  background-size: 100% 100%;
+  padding-left: 10px;
+}
+
+
+#beginGameButton {
+    font-size: 70px;
+    display: block;
+    margin-left: 25%;
+}
+
+#inputRulerName {
+    font-size: 25px;
+    width: 60%;
+}
+
+#rulerNameDiv {
+  width: 60%;
+}
+
+#soldiersDiv {
+  width: 75%;
+}
+
+#topItemsContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  top: 0;
+  position: fixed;
+  right: 0%;
+}
+
+#topItemsContainer div {
+  padding-bottom: 10px;
+}
+
+#topItemsContainer div {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+#topItemsContainer img {
+  margin-left: 12px;
+}
+
+
+#dynastyName {
+    font-size: 25px;
+    width: 60%;
+}
+
+#countryName {
+    font-size: 25px;
+    width: 60%;
+}
+
+#flagFile {
+  margin-bottom: 17px;
+}
+
+.field {
+    color: white;
+    width: 50%;
+    font-size: 40px;
+    display:inline-block;
+    background-image: url('../media/headerBackground.png');
+    background-size: 100% 100%;
+    padding-left: 10px;
+}
+
+.field label {
+    font-size: 30px;
+    padding-bottom: 4px;
+}
+.field input {
+    margin-bottom: 10px;
+}
+
+.title {
+    width: 859px;
+    height: 120px;
+    text-align: center;
+    display:inline-block;
+}
+
+
+.titleIcon {
+  width: 256px;
+  height: 256px;
+  float: right;
+  margin-right: 303px;
+}
+
+.applyConfirmButtonsDiv {
+  position: fixed;
+  bottom: 10%;
+  right: 2%;
+  margin: 10px;
+}
+
+#flagPreviewTitle {
+    display: none;
+  width: 400px;
+  height: 270px;
+  right: 0;
+}
+
+#flagPreviewGame {
+    display:inline-block;
+    width: 200px;
+    height: 130px;
+    vertical-align: text-top;
+    float: right;
+    position: absolute;
+}
+
+#confirmStartDiv {
+    display: none;
+}
+
+#regionOwnerFlag {
+  width: 288px;
+  height: 172px;
+  vertical-align: text-top;
+}
+
+#gameScreen {
+  display: none;
+}
+
+.gameBackground {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.overlayUI {
+  position: absolute;
+  pointer-events: none;
+}
+
+.overlayUI * {
+  pointer-events: auto;
+}
+
+.inlineIcon {
+  width:40%;
+  padding-right: 10px;
+}
+
+.inlineIcon img {
+  width:24px;
+  height:24px;
+}
+
+.inlineIconTop {
+  width:40%;
+  padding-right: 10px;
+}
+
+.inlineIconTop img {
+  width:54px;
+  height:54px;
+}
+
+.playerInfo {
+  pointer-events: none;
+}
+
+.playerInfo p {
+  /*width: 50%;*/
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0;
+  padding-left: 4px;
+  padding-bottom: 1px;
+  display: inline-block;
+}
+
+.provinceInfo {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.provinceInfo p {
+  /*width: 50%;*/
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0;
+  padding: 4px;
+}
+
+#rulerIcon {
+  width: 25%;
+  height: 25%;
+}
+
+.classicTextBackground {
+    background-image: url('../media/headerBackground.png');
+    background-size: 100% 100%;
+}
+
+.actionsUI button {
+    font-size: 25px;
+}
+
+.actionTextBackground {
+    background-image: url('../media/buttonBackground.png');
+    background-size: 100% 100%;
+    color: white;
+    font-weight: bold;
+    margin-bottom: -0.05em;
+    margin-top: 0em;
+    margin-right: 50%;
+}
+
+#currentYear {
+  font-size: 35px;
+  color: white;
+  right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  margin-top: 12%;
+}
+
+#initialProvinceSelectPrompt {
+  color: white;
+  margin: 0;
+}
+
+.defaultPopUp {
+  display: none;
+  background-image: url('../media/eventBackground.png');
+  background-size: 100% 113%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 169%;
+  position: absolute;
+  top: -4%;
+  left: 24%;
+}
+
+.innerEventContentBoundary {
+  width: 74%;
+  height: 84%;
+  margin: 5% 10% 0% 14%;
+}
+
+.innerFamilyContentBoundary {
+  width: 74%;
+  height: 71%;
+  margin: 12% 10% 0% 14%;
+  overflow: auto;
+}
+
+/*todo apply elements too all new elements here (hope it works)
+#familyTree ul, #familytree li{
+
+}*/
+
+#familyTreeTitle {
+  position: absolute;
+  right: 43%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#familyTree button {
+  font-size: 23px;
+  position: absolute;
+  bottom: 5%;
+}
+
+#treeCancel {
+  right: 20%;
+}
+
+#treeConfirm {
+  right: 10%;
+}
+
+.imgTextWrapDiv {
+  background-image: url('../media/parchmentBackground.png');
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  height: 80%;
+}
+
+
+.eventTextBox {
+  height: 36%;
+  background-color: wheat;
+  border-width: 8px;
+  border-style: ridge;
+  border-color: lightblue;
+  margin: 10px;
+  overflow: auto;
+}
+
+#eventImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 557px;
+  height: 222px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: black;
+}
+
+#eventText {
+  font-size: 22px;
+  text-align: center;
+}
+
+.eventButtons input, .eventButtons label, .eventButtons button {
+    font-size: 25px;
+}
+
+.eventButtons input, .eventButtons button{
+  background-color: #e4cba1;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  margin: 5px;
+}
+
+#eventErrorText {
+  display: none;
+  position: absolute;
+  bottom: -10%;
+  color: red;
+  font-weight: bold;
+  left: 15%;
+  font-size: 25px;
+  background-color: black;
+}
+
+#eventInputValue {
+    display: inline-block;
+    width: 60%;
+    background-color: #F8F2E8;
+}
+
+#familyErrorText {
+    display: none;
+    position: absolute;
+    bottom: 0%;
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#regionSelectBottomBar {
+  display: block;
+  position: fixed;
+  left: 20%;
+  bottom: 1%;
+}
+
+#regionSelectBottomBar p {
+  font-size : 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#regionSelectBottomBar button {
+  font-size : 25px;
+  padding-left: 10px;
+  background-image: url('../media/buttonBackground.png');
+  background-size: 350% 100%;
+  color: white;
+  padding: 7px;
+}
+
+
+#provinceSelectText {
+  margin : 0;
+  color: white;
+}
+
+#closeProvinceViewButton {
+  background-image: url('../media/closeButton.png');
+  background-size: 100% 100%;
+  position: fixed;
+  right: 0;
+  margin-top: -44px;
+  width: 45px;
+  height: 45px;
+}
+
+#svgMap {
+  /*position: fixed;*/
+  /*right: 0;*/
+  /*z-index: -1;*/
+  padding-left: 400px;
+  padding-right: 400px;
+  width: 72%;
+  height: 100%;
+  margin-left: 102px;
+  margin-top: -8px;
+}
+
