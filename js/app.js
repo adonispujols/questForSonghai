@@ -1134,7 +1134,8 @@ function confirmInfo() {
     // process input choices
     initialRulerName = document.getElementById("inputRulerName").value.trim();
     playerCountry.dynastyName = document.getElementById("dynastyName").value;
-    playerCountry.name = document.getElementById("countryName").value.trim();
+    // playerCountry.name = document.getElementById("countryName").value.trim();
+    playerCountry.name = "Songhai";
     playerCountry.color = document.getElementById("colorPick").value;
     document.getElementById("confirmStartText").textContent = "Start as Chief " +initialRulerName+" of "+playerCountry.name+" from the dynasty "+playerCountry.dynastyName+"?";
     document.getElementById("confirmStartDiv").style.display = "block";
@@ -1165,16 +1166,16 @@ function loadGame() {
     currentRuler.spouse = playerCountry;
     currentRuler.iconSet = true;
 
-    currentHeir = new Character("Jabari", 0, Math.floor(Math.random()*3)+1, babyIcons[skin][M_GENDER], M_GENDER, skin);
+    currentHeir = new Character("Jacob", 0, Math.floor(Math.random()*3)+1, babyIcons[skin][M_GENDER], M_GENDER, skin);
     // add another child
     currentRuler.children.push(currentHeir);
-    currentRuler.children.push(new Character("Amari", 0, Math.floor(Math.random()*3)+1, babyIcons[skin][F_GENDER], F_GENDER, skin));
+    currentRuler.children.push(new Character("Ada", 0, Math.floor(Math.random()*3)+1, babyIcons[skin][F_GENDER], F_GENDER, skin));
 
 
     // setup initial values in ui
     document.getElementById("rulerNameUI").textContent = getDynastyRankString() +" "+ initialRulerName +" of "+ playerCountry.name;
     document.getElementById("rulerIcon").src = currentRuler.iconUrl;
-    document.getElementById("dynastyNameDisplay").textContent = "House " + playerCountry.dynastyName;
+    document.getElementById("dynastyNameDisplay").textContent = "Family Of " + playerCountry.dynastyName;
     document.getElementById("age").textContent = "Age: " + INITIAL_RULER_AGE;
     document.getElementById("dynastyRank").textContent = "Rank: " + getDynastyRankString();
     document.getElementById("skillLevel").textContent = "Skill: " + INITIAL_RULER_SKILL_LEVEL;
@@ -1189,7 +1190,7 @@ function loadGame() {
     document.getElementById("regionCountryOpinion").textContent = "Opinion: " + getTrueOpinion(chosenRegion);
     document.getElementById("regionOwnerFlag").src = chosenRegion.countryOwner.flagUrl;
     document.getElementById("regionOwnerName").textContent = chosenRegion.countryOwner.name;
-    document.getElementById("regionDynastyName").textContent = "House " + chosenRegion.countryOwner.dynastyName;
+    // document.getElementById("regionDynastyName").textContent = "House " + chosenRegion.countryOwner.dynastyName;
     document.getElementById("regionName").textContent = chosenRegion.name;
     document.getElementById("provinceSelectText").textContent = "Selected Province/Country: " + chosenRegion.name;
 
@@ -1222,7 +1223,7 @@ function loadGame() {
             }
             document.getElementById("regionOwnerFlag").src = regionOwner.flagUrl;
             document.getElementById("regionOwnerName").textContent = regionOwner.name;
-            document.getElementById("regionDynastyName").textContent = "House " + regionOwner.dynastyName;
+            // document.getElementById("regionDynastyName").textContent = "House " + regionOwner.dynastyName;
             document.getElementById("regionName").textContent = regionName;
             document.getElementById("provinceSelectText").textContent = "Selected Province/Country: " + regionName;
             document.getElementById("provinceInfo").style.display = "block";
@@ -1313,7 +1314,7 @@ function attack() {
                                 dynastyRank++;
                                 if (!becameHolyRomanEmperor()) {
                                     showEventDialog("./media/rankup.jpg",
-                                        "Congratulations! Despite all challenges, your dynasty "+playerCountry.dynastyName+" continues to expand! You have ranked up to a "+getDynastyRankString()+"!",
+                                        "Congratulations! Despite all challenges, your dynasty "+playerCountry.dynastyName+" continues to expand! You have ranked up to  "+getDynastyRankString()+"!",
                                         "Continue");
                                     document.getElementById("endEventButton1").onclick = function() {
                                         document.getElementById("eventDialog").style.display = "none";
@@ -1482,7 +1483,7 @@ function askVassal() {
                             dynastyRank++;
                             if (!becameHolyRomanEmperor()) {
                                 showEventDialog("./media/rankup.jpg",
-                                    "Despite all challenges, your dynasty "+playerCountry.dynastyName+" continues to expand! You have ranked up to a "+getDynastyRankString()+"!",
+                                    "Despite all challenges, your dynasty "+playerCountry.dynastyName+" continues to expand! You have ranked up to "+getDynastyRankString()+"!",
                                     "Continue");
                                 document.getElementById("endEventButton1").onclick = function() {
                                     document.getElementById("eventDialog").style.display = "none";
@@ -1852,7 +1853,7 @@ function endTurn() {
                     REQUIRED_PROVINCES_KING -= 4;
                     REQUIRED_PROVINCES_EMPEROR -= 4;
                     showEventDialog("./media/crusadeVictory.png",
-                        "Your soldiers fought valiantly. You lost "+soldierLosses+" soldiers! Your title will rank up to a: " +getDynastyRankString()+"!",
+                        "Your soldiers fought valiantly. You lost "+soldierLosses+" soldiers! Your title will rank up to: " +getDynastyRankString()+"!",
                         "Continue");
                     document.getElementById("endEventButton1").onclick = function() {
                         // check if became holy emperor or ranked up, updating info as needed
@@ -2713,7 +2714,7 @@ function updateCurrentlyShownProvince() {
     }
     document.getElementById("regionOwnerFlag").src = chosenRegion.countryOwner.flagUrl;
     document.getElementById("regionOwnerName").textContent = chosenRegion.countryOwner.name;
-    document.getElementById("regionDynastyName").textContent = "House " + chosenRegion.countryOwner.dynastyName;
+    // document.getElementById("regionDynastyName").textContent = "House " + chosenRegion.countryOwner.dynastyName;
     document.getElementById("regionName").textContent = chosenRegion.name;
 }
 
