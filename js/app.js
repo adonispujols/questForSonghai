@@ -1166,7 +1166,7 @@ function loadGame() {
     currentRuler.spouse = playerCountry;
     currentRuler.iconSet = true;
 
-    currentHeir = new Character("Jacob", 0, Math.floor(Math.random()*3)+1, babyIcons[skin][M_GENDER], M_GENDER, skin);
+    currentHeir = new Character("Askia", 0, Math.floor(Math.random()*3)+1, babyIcons[skin][M_GENDER], M_GENDER, skin);
     // add another child
     currentRuler.children.push(currentHeir);
     currentRuler.children.push(new Character("Ada", 0, Math.floor(Math.random()*3)+1, babyIcons[skin][F_GENDER], F_GENDER, skin));
