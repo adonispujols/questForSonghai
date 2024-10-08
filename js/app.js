@@ -6,7 +6,7 @@
 */
 // (keeping as let variables to edit during debugging)
 // initial starting year
-let START_YEAR = 840;
+let START_YEAR = 1460;
 // initial soldiers of kingdom
 let INITIAL_PLAYER_SOLDIERS = 1000;
 // provinces required to level up to Duke, King, or Emperor (events can adjust this)
